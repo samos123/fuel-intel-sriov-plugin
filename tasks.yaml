@@ -1,0 +1,19 @@
+- role: ['controller']
+  stage: post_deployment
+  type: shell
+  parameters:
+    cmd: ./deploy-controller.sh
+    timeout: 300
+# Task is applied for all roles
+- role: ['compute']
+  stage: post_deployment
+  type: shell
+  parameters:
+    cmd: ./deploy-compute.sh
+    timeout: 300
+# "reboot" task reboots the nodes and waits until they get back online
+- role: ['compute']
+  stage: post_deployment
+  type: reboot
+  parameters:
+     timeout: 600

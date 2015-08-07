@@ -1,0 +1,15 @@
+attributes:
+  intel_sriov_number_vfs:
+    value: '7'
+    label: 'Number of VFs'
+    description: 'Number of Virtual Functions to enable of the SRIOV card.'
+    weight: 25
+    type: "text"
+
+  intel_sriov_pf_devname:
+    value: 'eth1'
+    label: 'Interface name of the PF'
+    description: 'The interface name of the network card supporting SRIOV and to be used as Physical Function.'
+    weight: 25
+    type: "text"
+
